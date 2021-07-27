@@ -46,7 +46,7 @@ index 218f5bafeed8551b55b91c7fccaf6935c8b631ca..3918b24c98faa5232c7ffd733ba80005
              // Only start Metrics, if it's enabled in the config
              if (config.getBoolean("enabled", true)) {
 -                Metrics metrics = new Metrics("Paper", serverUUID, logFailedRequests, Bukkit.getLogger());
-+                Metrics metrics = new Metrics("Tuinity", serverUUID, logFailedRequests, Bukkit.getLogger()); // Tuinity - we have our own bstats page
++                Metrics metrics = new Metrics("PbtServer", serverUUID, logFailedRequests, Bukkit.getLogger()); // Tuinity - we have our own bstats page
  
                  metrics.addCustomChart(new Metrics.SimplePie("minecraft_version", () -> {
                      String minecraftVersion = Bukkit.getVersion();
@@ -55,7 +55,7 @@ index 218f5bafeed8551b55b91c7fccaf6935c8b631ca..3918b24c98faa5232c7ffd733ba80005
                  metrics.addCustomChart(new Metrics.SingleLineChart("players", () -> Bukkit.getOnlinePlayers().size()));
                  metrics.addCustomChart(new Metrics.SimplePie("online_mode", () -> Bukkit.getOnlineMode() ? "online" : "offline"));
 -                metrics.addCustomChart(new Metrics.SimplePie("paper_version", () -> (Metrics.class.getPackage().getImplementationVersion() != null) ? Metrics.class.getPackage().getImplementationVersion() : "unknown"));
-+                metrics.addCustomChart(new Metrics.SimplePie("tuinity_version", () -> (Metrics.class.getPackage().getImplementationVersion() != null) ? Metrics.class.getPackage().getImplementationVersion() : "unknown")); // Tuinity - we have our own bstats page
++                metrics.addCustomChart(new Metrics.SimplePie("pbtserver_version", () -> (Metrics.class.getPackage().getImplementationVersion() != null) ? Metrics.class.getPackage().getImplementationVersion() : "unknown")); // Tuinity - we have our own bstats page
  
                  metrics.addCustomChart(new Metrics.DrilldownPie("java_version", () -> {
                      Map<String, Map<String, Integer>> map = new HashMap<>();
@@ -81,7 +81,7 @@ index 3dded5c491ace6b073a7bc3178976bd70f0b9393..ba2c44fb7dff7f53619328cf5092fd5e
      @DontObfuscate
      public String getServerModName() {
 -        return "Paper"; //Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
-+        return "Tuinity"; // Tuinity - Tuinity > //Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
++        return "PbtServer"; // Tuinity - Tuinity > //Paper - Paper > // Spigot - Spigot > // CraftBukkit - cb > vanilla!
      }
  
      public SystemReport fillSystemReport(SystemReport details) {
@@ -94,7 +94,7 @@ index 9954e45c32a4b6d80fe912ed9d55cd4fc8c4e98b..0ebe0e24bf2d5bd7bd78c47cbd0c1d1a
  
  public final class CraftServer implements Server {
 -    private final String serverName = "Paper"; // Paper
-+    private final String serverName = "Tuinity"; // Tuinity // Paper
++    private final String serverName = "PbtServer"; // Tuinity // Paper
      private final String serverVersion;
      private final String bukkitVersion = Versioning.getBukkitVersion();
      private final Logger logger = Logger.getLogger("Minecraft");

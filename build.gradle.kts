@@ -65,7 +65,7 @@ paperweight {
 
 tasks.paperclipJar {
     destinationDirectory.set(rootProject.layout.projectDirectory)
-    archiveFileName.set("tuinity-paperclip.jar")
+    archiveFileName.set("PbtServer-Tuinity-1.17.1-SNAPSHOT.jar")
 }
 
 tasks.withType<io.papermc.paperweight.patcher.tasks.SimpleRebuildGitPatches> {
