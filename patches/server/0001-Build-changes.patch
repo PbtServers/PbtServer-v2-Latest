@@ -24,7 +24,7 @@ index b50463c2356301a1b47a0bf4f50dc1f121d363a1..a0f0f8701a79d8934d0197578027a2f2
              "Main-Class" to "org.bukkit.craftbukkit.Main",
              "Implementation-Title" to "CraftBukkit",
 -            "Implementation-Version" to "git-Paper-$implementationVersion",
-+            "Implementation-Version" to "git-Tuinity-$implementationVersion", // Tuinity
++            "Implementation-Version" to "git-PbtServer-$implementationVersion", // Tuinity
              "Implementation-Vendor" to date, // Paper
              "Specification-Title" to "Bukkit",
              "Specification-Version" to project.version,
